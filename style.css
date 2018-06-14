@@ -57,6 +57,7 @@ body {
 	margin: 0 auto;
 	border: 2px solid #fff;
 	position: relative;
+	cursor: pointer;
 }
 
 .intro .circle:hover {
@@ -70,7 +71,6 @@ body {
 	left: 28px;
 	width: 28px;
 	height: 25px;
-
 }
 
 .intro .arrow {
@@ -199,7 +199,7 @@ header .social-icons a:hover {
 	position: absolute;
 	top: 20px;
 	right: 20px;
-	/*border: 1px solid red;*/
+	display: none;
 }
 
 .toggle span {
@@ -811,6 +811,10 @@ form .submit-form:hover {
 	header nav {
 		display: none;
 	}  
+
+	.toggle {
+		display: block;
+	}
 	
 	main .sub-wrapper {
 	width: calc(100% - 118px);
