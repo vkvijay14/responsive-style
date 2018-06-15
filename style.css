@@ -16,7 +16,15 @@ body {
 .intro {
 	text-align: center;
 	color: #fff;
+	transition: all .4s;
 	margin: 292px 64px 0 64px;
+	position: relative;
+	bottom: 0;
+}
+
+.intro.hidden {
+	bottom: -80px;
+	opacity: 0;
 }
 
 .intro a {
@@ -123,6 +131,8 @@ body {
 	cursor: pointer;
 	margin: 0 auto;
 	display: block;
+	opacity: 0;
+	transition: .4s;
 }
 
 .logo-button:hover {
@@ -130,10 +140,15 @@ body {
 	border: 5px solid #18bfef;
 	transition: .3s;
 }
+
+.logo-button.visible {
+	opacity: 1;
+	margin-bottom: 90px;
+}
 /*/INTRO*/
 /*HEADER*/
 header {
-	margin-top: 90px;
+	/*margin-top: 90px;*/
 }
 header nav {
 	width: calc(100% - 370px);
@@ -155,7 +170,7 @@ header .wrapper-nav li {
 header .wrapper-nav a {
 	text-decoration: none;
 	display: block;
-	padding: 28px 43px 28px 43px;
+	padding: 28px 43px 31px 43px;
 	color: #fff;
 	font-weight: bold;
 	font-family: "Source Sans Pro", Helvetica, sans-serif;
