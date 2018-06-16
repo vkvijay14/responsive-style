@@ -215,6 +215,7 @@ header .social-icons a:hover {
 	top: 20px;
 	right: 20px;
 	display: none;
+	cursor: pointer;
 }
 
 .toggle span {
@@ -270,8 +271,13 @@ header .social-icons a:hover {
 	background: #fff;
 	height: 100%;
 	padding: 0 30px;
-	display: none;
-	margin-right: -300px;
+	display: block;
+	right: -300px;
+	transition: .5s;
+}
+
+.show {
+	right: 0;
 }
 
 .slide-nav li {
