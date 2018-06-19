@@ -5,6 +5,7 @@
 
 body {
 	background: url("images/bg.jpg");
+  background-color: #222931;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: 100%;
@@ -147,11 +148,8 @@ body {
 }
 /*/INTRO*/
 /*HEADER*/
-header {
-	/*margin-top: 90px;*/
-}
 header nav {
-	width: calc(100% - 370px);
+	width: calc(100% - 150px);
 	margin: 0 auto;
 	display: table;
 	background: #ffffff0f;
@@ -176,11 +174,11 @@ header .wrapper-nav a {
 	font-family: "Source Sans Pro", Helvetica, sans-serif;
 	letter-spacing: 1px;
 	line-height: 1;
+	transition: .6s;
 }
 
 header .wrapper-nav a:hover {
 	background: #ffffff17;
-	transition: .6s;
 }
 
 header .wrapper-nav a:focus {
@@ -216,7 +214,7 @@ header .social-icons a:hover {
 	right: 20px;
 	display: none;
 	cursor: pointer;
-  display: block;
+  display: none;
   padding: 8px;
 }
 
@@ -232,6 +230,7 @@ header .social-icons a:hover {
 	background: #fff;
 	margin-top: 2px;
 	border-radius: 10px;
+  transition: .3s;
 }
 
 .toggle > span {
@@ -244,8 +243,12 @@ header .social-icons a:hover {
   transition: .3s;
 }
 
-.toggle > span:hover {
+.toggle:hover span {
   color: #18bfef;
+}
+
+.toggle:hover .toggle-wrap > span {
+  background: #18bfef;
 }
 
 .close-btn {
@@ -368,7 +371,7 @@ main .title-main span {
 }
 
 main {
-	width: calc(100% - 370px);
+	width: calc(100% - 150px);
 	margin: 0 auto;
 	display: table;
 	background: #fff;
@@ -397,11 +400,11 @@ main .head-top {
 	text-decoration: none;
 	color: #212931;
 	letter-spacing: 5px;
+	transition: .3s;
 }
 
 main .head-top:hover {
 	color: #18bfef;
-	transition: .3s;
 }
 
 .zoom-img {
@@ -658,12 +661,16 @@ form .submit-form:hover {
 .social-icon-bottom a {
 	text-decoration: none;
 	font-size: 20px;
+  width: 30px;
+  height: 25px;
 	color: #717981;
 	border: 2px solid #8594a166;
 	border-radius: 50%;
-	padding: 11px 18px;
+	padding: 6px 5px;
 	margin-right: 14px;
 	display: block;
+	
+	text-align: center;
 }
 
 .social-icon-bottom a:hover {
@@ -679,21 +686,28 @@ form .submit-form:hover {
 /*MEDEA QUERY*/
 @media screen and (max-width: 1680px) {
 	main, header nav {
-		width: calc(100% - 527px);
+		width: calc(100% - 225px);
 	}
 
 	.logo-button {
 		padding: 18px 25px;
-		font-size: 28px;
+		font-size: 30px;
 		letter-spacing: 1px;
 	}
 
 	.intro {
-		margin: 430px 64px 65px 64px;
+		margin: 300px 64px 65px 64px;
 	}
 
-	header .wrapper-nav {
-	}
+  .intro h1 {
+    margin-bottom: 60px;
+    font-size: 90px;
+  }
+
+  .intro p {
+    margin-bottom: 55px;
+    font-size: 28px;
+  }
 
 	header .wrapper-nav a {
 	padding: 24px 24px;
@@ -818,18 +832,45 @@ form .submit-form:hover {
 
 	.social-icon-bottom a {
 		font-size: 16px;
-		padding: 5px 8px;
+		padding: 6px 2px;
+    width: 30px;
+    height: 21px;
 		margin-right: 10px;
 	}
 }
 
 @media screen and (max-width: 1280px) {
+  .logo-button.visible {
+    margin-bottom: 45px;
+  }
+
 	main, header nav {
-		width: calc(100% - 225px);
+		width: calc(100% - 300px);
 	}
+
+  .contact > ul > li {
+    padding: 50px;
+  }
+
+
+  .intro h1 {
+    margin-bottom: 50px;
+    font-size: 80px;
+  }
+
+  .intro p {
+    margin-bottom: 40px;
+    font-size: 26px;
+    line-height: 1.5;
+  }
+
+  .toggle {
+    display: block;
+  }
 }
 
-@media screen and (max-width: 980px) {
+
+@media screen and (max-width: 1040px) {
 	.logo-button {
 		padding: 16px 25px;
 		font-size: 26px;
@@ -841,19 +882,25 @@ form .submit-form:hover {
   }
 
 	.intro {
-		margin: 430px 64px 57px 64px;
+		margin: 200px 64px 57px 64px;
 	}
 
-	.intro h1 {
-		margin-bottom: 32px;
-	}
+  .intro h1 {
+    font-size: 70px;
+    margin-bottom: 40px;
+  }
+
+  .intro p {
+    margin-bottom: 35px;
+    font-size: 24px;
+  }
 
 	header nav {
 		display: none;
 	}  
 
 	main .sub-wrapper {
-	width: calc(100% - 118px);
+	width: calc(100% - 150px);
 	margin-top: -60px;
 	}
 
@@ -900,7 +947,7 @@ form .submit-form:hover {
 	}
 
 	article .title {
-		font-size: 26px;
+		font-size: 25px;
 	}
 
 	.form-section {
@@ -922,6 +969,27 @@ form .submit-form:hover {
 }
 
 @media screen and (max-width: 736px) {
+  .intro {
+    margin: 150px 64px 65px 64px;
+  }
+
+  .intro .circle {
+    display: none;
+  }
+
+  .intro h1 {
+    font-size: 50px;
+    margin-bottom: 28px;
+  }
+
+  .intro p {
+    font-size: 22px
+  }
+
+  .intro p br {
+    display: none;
+  }
+
 	.logo-button {
 		font-size: 22px;
 		letter-spacing: 1px;
@@ -1001,14 +1069,34 @@ form .submit-form:hover {
 	.contact > ul > li {
 		padding: 30px;
 	}
+
+  .social-icon-bottom a {
+    padding: 4px 2px;
+    margin-right: 10px;
+    display: block;
+    
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 480px) {
+  main, header nav {
+    width: 100%;
+  }
+
+  .intro h1 {
+    font-size: 36px
+    margin-bottom : 25px;
+  }
+
+  .intro p {
+    font-size: 18px
+  }
+
 	main .top-img-btn {
 		font-size: 16px;
 		padding: 15px 0 18px;
 		letter-spacing: 1px;
-		margin-bottom: 95px;
 		width: 100%;
 	}
 }
